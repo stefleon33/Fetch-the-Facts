@@ -1,4 +1,4 @@
-# PupStagram
+# Fetch the Facts
 
 ## Table of contents
 
@@ -27,7 +27,7 @@ Navigate to specific pages containing this data and navigate back to the home pa
 
 ## Links
 
-Solution URL: https://github.com/stefleon33/pupstagram
+Solution URL: https://github.com/stefleon33/Fetch-the-Facts
 
 ## My process
 
