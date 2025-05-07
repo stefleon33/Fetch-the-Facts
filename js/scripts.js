@@ -25,11 +25,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
         card.innerHTML = `
         <h2>${dog.name}</h2>
-        <img src="${dog.image?.url || 'https://via.placeholder.com/150'}" alt="${dog.name}" />
-        <p><strong>Weight: </strong> ${dog.weight?.imperial || 'Unknown'} lbs</p>
-        <p><strong>Height: </strong>${dog.height?.imperial || 'Unknown'} inches</p>
-        <p><strong>Life Span: </strong>${dog.life_span || 'Unknown'} </p>
-        <p><strong>Temperament: </strong>${dog.temperament || 'Unknown'}</p> 
+        <img src="${
+          dog.image?.url || "https://via.placeholder.com/150"
+        }" alt="${dog.name}" />
+        <p><strong>Weight: </strong> ${
+          dog.weight?.imperial || "Unknown"
+        } lbs</p>
+        <p><strong>Height: </strong>${
+          dog.height?.imperial || "Unknown"
+        } inches</p>
+        <p><strong>Life Span: </strong>${dog.life_span || "Unknown"} </p>
+        <p><strong>Temperament: </strong>${dog.temperament || "Unknown"}</p> 
         `;
 
         statContainer.appendChild(card);
@@ -60,10 +66,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     card.innerHTML = `
         <h2>${dog.name}</h2>
-        <img src="${dog.image?.url || 'https://via.placeholder.com/150'}" alt="${dog.name}" />
-        <p><strong>Origin: </strong>${dog.origin || 'Unknown'}</p>
-        <p><strong>Breed group: </strong>${dog.breed_group || 'Unknown'}</p>
-        <p><strong>Bred for: </strong>${dog.bred_for || 'Unknown'}</p> 
+        <img src="${
+          dog.image?.url || "https://via.placeholder.com/150"
+        }" alt="${dog.name}" />
+        <p><strong>Origin: </strong>${dog.origin || "Unknown"}</p>
+        <p><strong>Breed group: </strong>${dog.breed_group || "Unknown"}</p>
+        <p><strong>Bred for: </strong>${dog.bred_for || "Unknown"}</p> 
     `;
 
     historyContainer.appendChild(card);
