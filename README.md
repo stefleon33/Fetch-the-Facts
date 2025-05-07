@@ -36,7 +36,7 @@ This is the advanced pre-work assignment for Code the Dream that allows me to de
 
 ## Links
 
--Solution URL: https://github.com/stefleon33/Fetch-the-Facts
+-[Live Link](https://fetchthefacts.netlify.app/)
 
 -[TheDogAPI](https://thedogapi.com) for endpoints on on Breed pages cards
 
