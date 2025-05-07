@@ -8,14 +8,14 @@ document.addEventListener("DOMContentLoaded", () => {
             "x-api-key": "live_YPYDKMlU4Jof3tE9DLcLTXBxJRbWnqVeabUI9luBfCN4VqL9PHGcnePaZAZcuHIQ"
         }
     })  
-        .then(response => response.json())
-        .then(stat => {
-        console.log(stat)
+      .then((response) => response.json())
+      .then((stat) => {
+        console.log(stat);
         stat.slice(0, 25).forEach((dog) => {
             createStatCard(dog);
         });
         })
-        .catch(error => {
+      .catch((error) => {
         console.error("Error fetching dog breed stat data:", error);
         });
 
@@ -39,17 +39,18 @@ document.addEventListener("DOMContentLoaded", () => {
     if (historyContainer) {
     fetch("https://api.thedogapi.com/v1/breeds?limit=25&page=0", {
         headers: {
-            "x-api-key": "live_YPYDKMlU4Jof3tE9DLcLTXBxJRbWnqVeabUI9luBfCN4VqL9PHGcnePaZAZcuHIQ"
-     }
+        "x-api-key":
+          "live_YPYDKMlU4Jof3tE9DLcLTXBxJRbWnqVeabUI9luBfCN4VqL9PHGcnePaZAZcuHIQ",
+      },
   })
-    .then(response => response.json())
-    .then(history => {
-      console.log(history)
+      .then((response) => response.json())
+      .then((history) => {
+        console.log(history);
         history.slice(0, 25).forEach((dog) => {
         createHistoryCard(dog);
       });
     })
-    .catch(error => {
+      .catch((error) => {
       console.error("Error fetching dog breed history data:", error);
     });
 
