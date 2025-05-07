@@ -20,6 +20,9 @@ html, body {
 
 main {
     flex: 1;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
     padding-bottom: 3rem;
 }
 
