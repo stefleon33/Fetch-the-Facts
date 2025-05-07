@@ -80,7 +80,7 @@ cd fetch-the-facts
 
 ## What I learned
 
-This project increased my confidence in calling apis and then displaying them on a webpage using a list format. It also refreshed my memory in creating and linking multiple pages within a home page.
+This project increased my confidence in calling apis and then displaying them on a webpage using a card format. It also refreshed my memory in creating and linking multiple pages within a home page.
 
 ## Author
 
