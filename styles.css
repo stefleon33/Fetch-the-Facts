@@ -83,3 +83,25 @@ h1 {
     height: auto;
     border-radius: 4px;
 }
+
+#scrollBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    padding: 12px 16px;
+    border-radius: 50%;
+    font-size: 18px;
+    display: none;
+    /* Hidden by default */
+    transition: background-color 0.3s;
+}
+
+#scrollBtn:hover {
+    background-color: #555;
+}

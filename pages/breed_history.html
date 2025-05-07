@@ -58,9 +58,12 @@
         </div>
         <!--Container that scripts.js will load the dog breed history to-->
         <div id="history-card-container"></div>
+        <!--Button to allow users to scroll back to the top-->
+        <button onclick="scrollToTop()" id="scrollBtn" title="Go to top">↑</button>
+
     </main>
     
-    <footer class="footer fixed-bottom">
+    <footer class="footer">
         <div class="container text-center">
             <span> Fetch the Facts | Built using <a href="https://thedogapi.com/">TheDogAPI</a></span>
         </div>
@@ -68,6 +71,22 @@
 
     <!--Scripts for calling to TheDogAPI to get breed data-->
     <script src="../js/scripts.js" defer></script>
+    <script>
+        // Show button after scrolling down 100px
+        window.onscroll = function () {
+            const btn = document.getElementById("scrollBtn");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
 
 </html>
