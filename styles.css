@@ -45,6 +45,11 @@ h1 {
     text-align: center;
     color: darkcyan;
 }
+
+.text-box {
+  margin: 20px;
+}
+
 .random-dog {
   width: auto;
   height: auto;
