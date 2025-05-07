@@ -43,7 +43,8 @@ h1 {
     width: 100%;
     padding: 20px;
     text-align: center;
-    color: #1C3FA6;
+    color: darkcyan;
+}
 }
 
 #stats-card-container {
