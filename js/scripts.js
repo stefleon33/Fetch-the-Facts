@@ -1,29 +1,31 @@
-document.addEventListener("DOMContentLoaded", () => {    
-    const statContainer = document.getElementById("stats-card-container");
-    const historyContainer = document.getElementById("history-card-container");
+document.addEventListener("DOMContentLoaded", () => {
+  //Containers for stats and history cards
+  const statContainer = document.getElementById("stats-card-container");
+  const historyContainer = document.getElementById("history-card-container");
 
-   if (statContainer) {
+  if (statContainer) {
     fetch("https://api.thedogapi.com/v1/breeds?limit=25&page=0", {
-        headers: {
+      headers: {
             "x-api-key": "live_YPYDKMlU4Jof3tE9DLcLTXBxJRbWnqVeabUI9luBfCN4VqL9PHGcnePaZAZcuHIQ"
         }
-    })  
+    })
       .then((response) => response.json())
       .then((stat) => {
         console.log(stat);
         stat.slice(0, 25).forEach((dog) => {
-            createStatCard(dog);
+          createStatCard(dog);
         });
-        })
+      })
       .catch((error) => {
         console.error("Error fetching dog breed stat data:", error);
-        });
+      });
 
+    // Stats Card created and attributes from API added 
     function createStatCard(dog) {
-        const card = document.createElement("div");
-        card.classList.add("dog-card");
+      const card = document.createElement("div");
+      card.classList.add("dog-card");
 
-        card.innerHTML = `
+      card.innerHTML = `
         <h2>${dog.name}</h2>
         <img src="${
           dog.image?.url || "https://via.placeholder.com/150"
@@ -38,33 +40,34 @@ document.addEventListener("DOMContentLoaded", () => {
         <p><strong>Temperament: </strong>${dog.temperament || "Unknown"}</p> 
         `;
 
-        statContainer.appendChild(card);
-        }
+      statContainer.appendChild(card);
     }
-    
-    if (historyContainer) {
+  }
+
+  if (historyContainer) {
     fetch("https://api.thedogapi.com/v1/breeds?limit=25&page=0", {
-        headers: {
+      headers: {
         "x-api-key":
           "live_YPYDKMlU4Jof3tE9DLcLTXBxJRbWnqVeabUI9luBfCN4VqL9PHGcnePaZAZcuHIQ",
       },
-  })
+    })
       .then((response) => response.json())
       .then((history) => {
         console.log(history);
         history.slice(0, 25).forEach((dog) => {
-        createHistoryCard(dog);
-      });
-    })
+          createHistoryCard(dog);
+        });
+      })
       .catch((error) => {
-      console.error("Error fetching dog breed history data:", error);
-    });
+        console.error("Error fetching dog breed history data:", error);
+      });
 
-  function createHistoryCard(dog) {
-    const card = document.createElement("div");
-    card.classList.add("dog-card");
+    // History Card created and attributes from API added 
+    function createHistoryCard(dog) {
+      const card = document.createElement("div");
+      card.classList.add("dog-card");
 
-    card.innerHTML = `
+      card.innerHTML = `
         <h2>${dog.name}</h2>
         <img src="${
           dog.image?.url || "https://via.placeholder.com/150"
@@ -74,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <p><strong>Bred for: </strong>${dog.bred_for || "Unknown"}</p> 
     `;
 
-    historyContainer.appendChild(card);
+      historyContainer.appendChild(card);
     }
   }
 
